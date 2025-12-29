@@ -1,0 +1,6 @@
+(library
+ (name demo_range)
+ (modules range_finder)
+ (libraries core hardcaml)
+ (preprocess
+  (pps ppx_hardcaml ppx_jane)))

@@ -1,0 +1,7 @@
+(executable
+ (name test_range_finder)
+ (modules range_finder test_range_finder)
+ (libraries core hardcaml            hardcaml_test_harness
+   hardcaml_waveterm re)
+ (preprocess
+  (pps ppx_hardcaml ppx_jane)))
