@@ -1,7 +1,7 @@
 (executable
  (name test)
- (modules sol test aoc_input)
+ (modules sol test)
  (libraries core hardcaml            hardcaml_test_harness
-   hardcaml_waveterm re)
+   hardcaml_waveterm re aoc_input)
  (preprocess
   (pps ppx_hardcaml ppx_jane)))

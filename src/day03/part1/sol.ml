@@ -35,6 +35,7 @@ module O = struct
   type 'a t =
     { (* With_valid.t is an Interface type that contains a [valid] and a [value] field. *)
       ans : 'a With_valid.t [@bits out_width]
+    ; state : 'a [@bits 2]
     }
   [@@deriving hardcaml]
 end
@@ -119,7 +120,7 @@ let create scope ({ clock; clear; start; finish; finish_line; data_in; data_in_v
         ]
     ];
   (* [.value] is used to get the underlying Signal.t from a Variable.t in the Always DSL. *)
-  { ans = { value = my_ans.value; valid = ans_valid.value } }
+  { ans = { value = my_ans.value; valid = ans_valid.value }; state = sm.current }
 
 (* The [hierarchical] wrapper is used to maintain module hierarchy in the generated
    waveforms and (optionally) the generated RTL. *)
