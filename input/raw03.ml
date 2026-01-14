@@ -1,4 +1,4 @@
-module Raw_inputs : Input_signatures.Raw_t = struct
+module Raw_inputs = struct
   let raw_example_input : string = "987654321111111
 811111111111119
 234234234234278

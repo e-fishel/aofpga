@@ -1,4 +1,4 @@
 (library
  (name aoc_input)
- (modules input_signatures raw03 parse03)
- (libraries core))
+ (modules input_signatures raw03 parse03 raw06 parse06)
+ (libraries core re))
